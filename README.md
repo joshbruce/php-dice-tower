@@ -2,7 +2,7 @@
 
 A PHP library for "rolling" *n* dice, with *n* sides each.
 
-Generates cryptographic random integers for unbiased results.
+Generates [cryptographic random integers](https://www.php.net/manual/en/function.random-int.php) for unbiased results.
 
 ## Installation
 

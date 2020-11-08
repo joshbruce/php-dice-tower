@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+	backupGlobals="false"
+	backupStaticAttributes="false"
+	bootstrap="vendor/autoload.php"
+	cacheResult="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	processIsolation="false"
+	stopOnFailure="false" >
+  <coverage>
+    <include>
+      <directory suffix=".php">./src/</directory>
+    </include>
+    <exclude>
+      <directory>vendor/</directory>
+    </exclude>
+  </coverage>
+  <testsuites>
+    <testsuite name="all">
+  		<directory suffix="Test.php">./tests</directory>
+    </testsuite>
+    <testsuite name="filter">
+		<directory suffix="Test.php">./tests/Filter</directory>
+    </testsuite>
+    <testsuite name="filter_unit">
+		<directory suffix="Test.php">./tests/Filter/Unit</directory>
+    </testsuite>
+    <testsuite name="filter_contracts">
+		<directory suffix="Test.php">./tests/FilterContracts</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <ini name="display_errors" value="On"/>
+    <ini name="display_startup_errors" value="On"/>
+  </php>
+</phpunit>

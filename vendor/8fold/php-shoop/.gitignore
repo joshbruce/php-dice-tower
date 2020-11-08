@@ -1,0 +1,6 @@
+.DS_Store
+.phpintel/
+
+vendor/
+node_modules/
+npm-debug.log

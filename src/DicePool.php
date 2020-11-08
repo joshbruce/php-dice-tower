@@ -64,7 +64,7 @@ class DicePool extends Fold
         return Shoop::this($rolls)->each(function($v, $m, &$b) {
             $index = $v->roll();
             $b[$index][] = $v;
-        });
+        })->unfold();
     }
 
     public function result(): array

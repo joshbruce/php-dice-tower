@@ -9,7 +9,7 @@ use Eightfold\Shoop\Shoop;
 
 use JoshBruce\DiceTower\Dn;
 
-class DiceTower extends Fold
+class DicePool extends Fold
 {
     private $sides = 6;
     private $count = 1;

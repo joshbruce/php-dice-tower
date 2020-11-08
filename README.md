@@ -7,7 +7,7 @@ Generates [cryptographic random integers](https://www.php.net/manual/en/function
 ## Installation
 
 ```
-composer require joshbruce/php-dice-bag
+composer require joshbruce/php-dice-tower
 ```
 
 ## Usage

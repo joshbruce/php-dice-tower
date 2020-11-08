@@ -65,7 +65,7 @@ class DicePool extends Fold
 
     public function sort(bool $highToLow = true): DicePool
     {
-        usort($this->rolls(), function($a, $b) use ($highToLow) {
+        usort($this->rolls, function($a, $b) use ($highToLow) {
             return ($highToLow)
                 ? $a->roll() < $b->roll()
                 : $a->roll() > $b->roll();

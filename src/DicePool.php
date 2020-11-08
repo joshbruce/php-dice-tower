@@ -18,7 +18,7 @@ class DicePool extends Fold
 
     private $isCast = false;
 
-    static public function roll(int $count = 1, int $sides = 6): DiceBag
+    static public function roll(int $count = 1, int $sides = 6): DicePool
     {
         $bag = static::fold($sides, $count);
         $bag->result();
@@ -28,7 +28,7 @@ class DicePool extends Fold
     /**
      * roll7d6 -> roll(7, 6)
      */
-    static public function __callStatic(string $name, array $args = []): DiceBag
+    static public function __callStatic(string $name, array $args = []): DicePool
     {
         $name = Shoop::this($name);
         $numbers = $name->divide("d", false, 2);
@@ -63,7 +63,7 @@ class DicePool extends Fold
         return $this->rolls();
     }
 
-    public function sort(bool $highToLow = true): DiceBag
+    public function sort(bool $highToLow = true): DicePool
     {
         usort($this->rolls(), function($a, $b) use ($highToLow) {
             return ($highToLow)

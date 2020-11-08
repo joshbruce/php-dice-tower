@@ -58,6 +58,15 @@ class DicePool extends Fold
         return $this->rolls;
     }
 
+    public function grouped():array
+    {
+        $rolls = $this->rolls();
+        return Shoop::this($rolls)->each(function($v, $m, &$b) {
+            $index = $v->roll();
+            $b[$index][] = $v;
+        });
+    }
+
     public function result(): array
     {
         return $this->rolls();

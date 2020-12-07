@@ -15,7 +15,9 @@ composer require joshbruce/php-dice-tower
 Say you are rolling a character for an RPG using a fairly standard method (4d6, drop the lowest).
 
 ```php
-DiceBag::roll4d6()->highest(3)->sum();
+use JoshBruce\DiceTower\DicePool;
+
+DicePool::roll4d6()->highest(3)->sum();
 // step 1: [3, 5, 2, 1]
 // step 2: [5, 3, 2]
 // step 3: 10
@@ -24,7 +26,9 @@ DiceBag::roll4d6()->highest(3)->sum();
 You do not need to use the magic static method:
 
 ```php
-DiceBag::roll(4, 6)->highest(3)->sum();
+use JoshBruce\DiceTower\DicePool;
+
+DicePool::roll(4, 6)->highest(3)->sum();
 // step 1: [3, 5, 2, 1]
 // step 2: [5, 3, 2]
 // step 3: 10
@@ -33,11 +37,15 @@ DiceBag::roll(4, 6)->highest(3)->sum();
 You can also roll a single die using one of the following:
 
 ```php
-DiceBag::roll();
+use JoshBruce\DiceTower\DicePool;
+
+DicePool::roll();
 // rolls 1d6
 
-DiceBag::roll(1, 6);
+DicePool::roll(1, 6);
 // rolls 1d6
+
+use JoshBruce\DiceTower\Dn;
 
 Dn::withSides();
 // roll 1 die with the given number of sides

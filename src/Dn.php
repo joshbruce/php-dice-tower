@@ -24,7 +24,7 @@ class Dn extends Fold
     public function roll()
     {
         if ($this->roll === null) {
-            $this->roll = rand(1, $this->sides);
+            $this->roll = random_int(1, $this->sides);
         }
         return $this->roll;
     }

@@ -55,7 +55,7 @@ The values of the rolls are calculated at instantiation. Therefore, the various 
 
 ## Details
 
-Effectively this is a random number generator using cryptographic random integers suitable for use where unbiased results ([`random_int`](https://www.php.net/manual/en/function.random-int.php)). The minimum value is always 1.
+Effectively this is a random number generator using cryptographic random integers suitable for use where unbiased results are critical ([`random_int`](https://www.php.net/manual/en/function.random-int.php)). The minimum value is always 1.
 
 Inspired by [AnyDice](https://anydice.com) and driven by the desire to create an [MORPG](https://en.wikipedia.org/wiki/Massively_multiplayer_online_role-playing_game) using various dice-based systems; specifically [7DSystem](http://www.7dsystem.com) and the [Cypher System](http://cypher-system.com).
 

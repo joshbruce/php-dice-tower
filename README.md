@@ -61,4 +61,19 @@ Inspired by [AnyDice](https://anydice.com) and driven by the desire to create an
 
 ## Other
 
-See the .github directory for various details including code of conduct, constribution notes, and so on.
+See the .github directory for various details including code of conduct, contribution notes, and so on.
+
+### Contributing
+
+See [Contributing](https://github.com/joshbruce/php-dice-tower/blob/master/.github/CONTRIBUTING.md) documentation for general contribution notes.
+
+1. Fork this repo
+2. Check out repo using [GitHub Desktop](https://desktop.github.com) or Terminal
+2. Verify [Composer](https://getcomposer.org) is installed: `~ composer --version`
+3. `~ cd /path/to/repo`
+4. `~ composer install`
+5. Wait until complete
+6. `~ ./vendor/bin/phpunit` (if you have `phpunit` available globally that is okay)
+7. All tests should pass
+
+Make desired alterations and [submit a PR](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
